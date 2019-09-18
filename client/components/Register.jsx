@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 
+import { register, isAuthenticated } from 'authenticare/client'
+
+
 import { GridForm, ColOne, ColTwo, Button } from './Styled'
 
-// TODO: implement or import proper isAuthenticated and register functions
-const isAuthenticated = () => true
-const register = () => {}
 
 export default function Register (props) {
   const [form, setForm] = useState({

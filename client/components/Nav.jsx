@@ -1,35 +1,26 @@
 import React from 'react'
-import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import { logOff } from 'authenticare/client'
 
 import { IfAuthenticated, IfNotAuthenticated } from './Authenticated'
 
-// TODO: implement or import a proper logOff function
-const logOff = () => {}
 
-const NavGroup = styled.div`
-  float: right;
-`
-
-const NavLink = styled(Link)`
-  margin-right: 30px;
-`
 
 export default function Nav () {
   return (
     <React.Fragment>
-      <NavGroup>
-        <NavLink to='/'>Home</NavLink>
+      <div>
+        <Link to='/'>Home</Link><br/>
         <IfAuthenticated>
-          <NavLink to='#' data-testid='logoff'
-            onClick={logOff}>Log off</NavLink>
+          <Link to='#' data-testid='logoff' onClick={logOff}>Log off</Link> <br/>
+          <Link to='/service-form' >Log Services for Client</Link><br />
         </IfAuthenticated>
         <IfNotAuthenticated>
-          <NavLink to='/register' data-testid='register'>Register</NavLink>
-          <NavLink to='/signin' data-testid='signin'>Sign in</NavLink>
+          <Link to='/register'data-testid='register' >Register as a Volunteer</Link><br />
+          <Link to='/signin' data-testid='signin' >Volunteer Sign in</Link>
         </IfNotAuthenticated>
-      </NavGroup>
-      <h1>Fruit FTW!</h1>
+      </div>
+     
     </React.Fragment>
   )
 }
