@@ -12,11 +12,12 @@ export default function Nav () {
       <div>
         <Link to='/'>Home</Link><br/>
         <IfAuthenticated>
-          <Link to='#' onClick={logOff}>Log off</Link> <br/>
+          <Link to='#' data-testid='logoff' onClick={logOff}>Log off</Link> <br/>
+          <Link to='/service-form' >Log Services for Client</Link><br />
         </IfAuthenticated>
         <IfNotAuthenticated>
-          <Link to='/register' >Register as a Volunteer</Link><br />
-          <Link to='/signin' >Volunteer Sign in</Link>
+          <Link to='/register'data-testid='register' >Register as a Volunteer</Link><br />
+          <Link to='/signin' data-testid='signin' >Volunteer Sign in</Link>
         </IfNotAuthenticated>
       </div>
      
