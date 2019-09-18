@@ -1,7 +1,6 @@
 import request from 'superagent'
 
-// TODO: implement or import a proper getEncodedToken function
-const getEncodedToken = () => 'encoded-token'
+import { getEncodedToken } from 'authenticare/client'
 
 const rootUrl = '/api/v1/fruits'
 
