@@ -7,6 +7,7 @@ import Register from './Register'
 import SignIn from './SignIn'
 import Header from './Header'
 import Clients from './Clients'
+import ServiceList from './ServiceList'
 
 export default function App () {
   return (
@@ -16,7 +17,7 @@ export default function App () {
       <Route path='/clients' component={Clients} />
       <Route path='/register' component={Register} />
       <Route path='/signin' component={SignIn} />
-      {/* <Route path='/services' component={Service-List} /> */}
+      <Route path='/services' component={ServiceList} />
     </Router>
   )
 }

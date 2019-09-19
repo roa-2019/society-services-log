@@ -58,16 +58,7 @@ class Clients extends React.Component {
         return (
             <React.Fragment>
 
-                {/* <div className="clientList">
-                    <ul>
-                        {this.state.clients.map(client => (
-                            <li key={client.id}>
-                                {client.service_date}
-                                {client.name}
-                            </li>
-                        ))}
-                    </ul>
-                </div> */}
+                
 
                 <form onSubmit={this.handleSave}>
                     <h3>Client Details</h3>
@@ -100,10 +91,10 @@ class Clients extends React.Component {
                     value={this.state.client.service_type} onChange={this.handleChange} >
                         <option value='null'>...Select</option>
                         <option value='visit'>Visit</option>
-                        <option value='fuelvoucher'>Fuel Voucher</option>
-                        <option value='foodvoucher'>Food Voucher</option>
+                        <option value='fuel voucher'>Fuel Voucher</option>
+                        <option value='food voucher'>Food Voucher</option>
                         <option value='clothing'>Clothing</option>
-                        <option value='studentgrant'>Student grants</option>
+                        <option value='student grant'>Student grants</option>
                         <option value='other'>Other</option>
                     </select>
 
