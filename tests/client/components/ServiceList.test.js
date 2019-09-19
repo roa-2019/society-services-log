@@ -78,7 +78,6 @@ test('component header', () => {
 test('renders an <li> for each client', () => {
   const wrapper = shallow(<ServiceList />)
    wrapper.setState({clients})
-   console.log(wrapper.find('li').length)
    expect(wrapper.find('li').length).toBe(9) 
    //because thesere are three nested lis in each client <li>
   
