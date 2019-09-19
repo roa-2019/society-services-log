@@ -6,6 +6,7 @@ class Header extends Component {
             <React.Fragment>
                 <h1>Rose Society</h1>
                 <p>Charitable Organisation</p>
+                <img src='flowerbanner.jpg' />
             </React.Fragment>
         )
     }

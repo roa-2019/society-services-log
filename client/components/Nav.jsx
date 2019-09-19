@@ -13,7 +13,8 @@ export default function Nav () {
         <Link to='/'>Home</Link><br/>
         <IfAuthenticated>
           <Link to='#' data-testid='logoff' onClick={logOff}>Log off</Link> <br/>
-          <Link to='/service-form' >Log Services for Client</Link><br />
+          <Link to='/clients' >Log Services for Client</Link><br />
+          <Link to='/services'>Services Logged</Link>
         </IfAuthenticated>
         <IfNotAuthenticated>
           <Link to='/register'data-testid='register' >Register as a Volunteer</Link><br />
