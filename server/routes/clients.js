@@ -23,9 +23,13 @@ router.get('/', (req, res) => {
 // POST /api/v1/clients
 router.post('/', (req, res) => {
   const newClient = req.body
-  console.log(newClient)
-
-    .then(result => res.json({ result }))
+  return db.addClient(newClient)
+      .then(result => {
+        res.json({ result })
+      })
+      .catch((err) => {
+        res.status(500).send(err.message)
+      })
 
 
 })

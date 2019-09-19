@@ -18,6 +18,7 @@ export function addClient(client, url=rootUrl){
   .then(res => res.body.clients)
   .catch(logError)
 }
+
 export function updateCLient (client, url=rootUrl) {
   return request.put(url)
   .send(client)
