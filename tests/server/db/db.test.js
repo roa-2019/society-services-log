@@ -19,7 +19,8 @@ test('getClients returns all clients', () => {
 })
 
 test('addClient adds a client', () => {
-  const client = {
+  const newClient = {
+    id:3,
     firstName: 'Rubeus',
     lastName: 'Hagrid',
     address: 'Hogwarts',
@@ -30,9 +31,9 @@ test('addClient adds a client', () => {
     time_spent: 2,
     service_desc: 'Holiday pet care',
   }
-  return db.addClient(client, testDb)
-    .then(clients => {
-      expect(clients.length).toBe(3)
+  return db.addClient(newClient, testDb) 
+      .then(clients => {
+       expect(clients.length).toBe(3)
     })
 })
 
