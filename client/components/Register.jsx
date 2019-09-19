@@ -20,7 +20,6 @@ export default function Register (props) {
   }
 
   const handleClick = () => {
-    console.log(form)
     register({
       username: form.username,
       password: form.password
