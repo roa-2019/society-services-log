@@ -106,17 +106,17 @@ class Clients extends React.Component {
 
                         <label><h5>Costs incurred</h5></label>
                         $<input type="number" min="0.01" step="0.01" max="500" name="cost" onChange={this.handleChange} value={this.state.client.cost} />
-                      
+
 
                         <p id='form-note'>Please note: if costs incurred exceed the limit of $200 please consult Conference Leadership before continuing</p>
-                        
+
                         <label><h5>Time spent</h5></label>
                         <input type="number" name="time_spent" onChange={this.handleChange} value={this.state.client.time_spent} /> Hours (estimated to the hour)
-<br />
+
                         <label><h5>Brief description of services provided</h5></label>
                         <textarea name="service_desc" rows="10" cols="50" onChange={this.handleChange} value={this.state.client.service_desc}></textarea>
-                       
 
+                        <br />
                         <input type='submit' value="SAVE" />
                     </form>
                 </div>
