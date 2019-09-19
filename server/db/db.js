@@ -14,8 +14,7 @@ async function getClients (db = connection) {
 async function addClient (client, db = connection) {
   return db('clients')
     .insert(client)
-    .then(() => db)
-    .then(getClients)
+    .then(() => getClients(db))
     //.then(sort)
 }
 
@@ -23,8 +22,7 @@ async function updateClient (newClient, db = connection) {
   return db('clients')
     .where('id', newClient.id)
     .update(newClient)
-    .then(() => db)
-    .then(getClients)
+    .then(() => getClients(db))
     //.then(sort)
 }
 

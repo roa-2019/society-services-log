@@ -11,39 +11,54 @@ beforeEach(() => {
 
 afterEach(() => env.cleanup(testDb))
 
-test('getFruits returns all fruits', () => {
-  return db.getFruits(testDb)
-    .then(fruits => {
-      expect(fruits.length).toBe(3)
+test('getClients returns all clients', () => {
+  return db.getClients(testDb)
+    .then(clients => {
+      expect(clients.length).toBe(2)
     })
 })
 
-test('addFruit adds a fruit', () => {
-  const fruit = {
-    name: 'papaya',
-    calories: 26
+test('addClient adds a client', () => {
+  const client = {
+    firstName: 'Rubeus',
+    lastName: 'Hagrid',
+    address: 'Hogwarts',
+    situation: 'School game keeper',
+    service_date: '2019-01-01',
+    service_type: 'visit',
+    cost: 0.00,
+    time_spent: 2,
+    service_desc: 'Holiday pet care',
   }
-  return db.addFruit(fruit, testDb)
-    .then(fruits => {
-      expect(fruits.length).toBe(4)
+  return db.addClient(client, testDb)
+    .then(clients => {
+      expect(clients.length).toBe(3)
     })
 })
 
-test('updateFruit updates a fruit', () => {
-  const fruit = {
-    id: 3,
-    name: 'papaya',
-    calories: 26
+test('updateClient updates a client', () => {
+  const client = {
+    id:2,
+    firstName: 'Rubeus',
+    lastName: 'Hagrid',
+    address: 'Hogwarts',
+    situation: 'School game keeper',
+    service_date: '2019-01-01',
+    service_type: 'visit',
+    cost: 0,
+    time_spent: 2,
+    service_desc: 'Holiday pet care',
   }
-  return db.updateFruit(fruit, testDb)
-    .then(fruits => {
-      expect(fruits[2].name).toBe(fruit.name)
+  return db.updateClient(client, testDb)
+    .then(clients => {
+     expect(clients[1].firstName).toBe(client.firstName)
     })
 })
 
-test('deleteFruit deletes a fruit', () => {
-  return db.deleteFruit(2, testDb)
-    .then(fruits => {
-      expect(fruits.length).toBe(2)
-    })
-})
+//not in use yet
+// test('deleteClient deletes a client', () => {
+//   return db.deleteClient(2, testDb)
+//     .then(clients => {
+//       expect(clients.length).toBe(2)
+//     })
+// })

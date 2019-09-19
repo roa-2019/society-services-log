@@ -6,20 +6,23 @@ import {
 } from '../api'
 
 class Clients extends React.Component {
-    state = {
-        client: {
-            firstName: '',
-            lastName: '',
-            address: '',
-            situation: '',
-            service_date: '1991-01-01',
-            service_type: '',
-            cost: 0.00,
-            time_spent: 0,
-            service_desc: '',
+    constructor(props){
+        super(props);
+        this.state ={
+            client: {
+                firstName: '',
+                lastName: '',
+                address: '',
+                situation: '',
+                service_date: '1991-01-01',
+                service_type: '',
+                cost: 0.00,
+                time_spent: 0,
+                service_desc: '',
+            }
         }
     }
-
+    
     // handleSave = (e) => {
     //     const newClient = { ...this.state.client }
     //   addClient(newClient)
@@ -53,7 +56,6 @@ class Clients extends React.Component {
     }
 
     render() {
-        console.log(this.state.client.service_type)
         return (
             <React.Fragment>
 
