@@ -1,6 +1,8 @@
 import React from 'react'
-import authenticare from 'authenticare/client'
-import { render, fireEvent, cleanup } from 'react-testing-library'
+import { cleanup } from 'react-testing-library'
+import Enzyme, { mount, shallow } from 'enzyme'
+import Adapter from 'enzyme-adapter-react-16'
+
 
 import {
   addClient,
@@ -9,7 +11,10 @@ import {
  
 } from '../../../client/api'
 
-import Clients from '../../../client/components/Clients'
+import ServiceList from '../../../client/components/ServiceList'
+ServiceList.prototype.componentDidMount = () => {}
+
+Enzyme.configure({adapter: new Adapter()})
 
 require('babel-polyfill')
 jest.mock('authenticare/client')
@@ -58,16 +63,23 @@ beforeEach(() => {
   getClients.mockImplementation(mockGetClients)
 })
 
-afterEach(cleanup)
+// afterEach(cleanup)
 
-describe('Clients component', () => {
-  it('renders an <li> for each client', () => {
-    const { findAllByTestId } = render(<Clients />)
+test('test runner is working', () => {
+  expect(2+2).toEqual(4)
+})
 
-    return findAllByTestId(clientLink)
-      .then(found => {
-        expect(found.length).toBe(3)
-      })
-  })
+test('component header', () => {
+  const wrapper = shallow(<ServiceList />)
+  const h2 = wrapper.find('h2')
+  expect(h2.text()).toContain('Services')
+})
 
+test('renders an <li> for each client', () => {
+  const wrapper = shallow(<ServiceList />)
+   wrapper.setState({clients})
+   console.log(wrapper.find('li').length)
+   expect(wrapper.find('li').length).toBe(9) 
+   //because thesere are three nested lis in each client <li>
+  
 })
