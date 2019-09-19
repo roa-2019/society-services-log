@@ -10,11 +10,11 @@ beforeEach(() => {
   db.reset()
 })
 
-test('GET / returns all the fruits', () => {
+test('GET / returns all the clients', () => {
   return request(server)
-    .get('/api/v1/fruits')
+    .get('/api/v1/clients')
     .then(res => {
-      expect(res.body.fruits).toHaveLength(3)
+      expect(res.body.clients).toHaveLength(3)
     })
 })
 

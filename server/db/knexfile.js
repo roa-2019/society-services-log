@@ -9,9 +9,6 @@ module.exports = {
     },
     migrations: {
       directory: path.join(__dirname, 'migrations')
-    },
-    seeds: {
-      directory: path.join(__dirname, '../../tests/server/db/seeds')
     }
   },
 

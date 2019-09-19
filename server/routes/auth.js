@@ -16,6 +16,4 @@ applyAuthRoutes(router, {
 })
 
 
-// TODO: create POST routes for /auth/signin and /auth/register
-
 module.exports = router
