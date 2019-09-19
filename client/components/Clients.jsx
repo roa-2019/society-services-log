@@ -36,8 +36,7 @@ class Clients extends React.Component {
     handleChange = (e) => {
 
         const { name, value } = e.target
-        console.log(name, value)
-        console.log(this.state)
+
         this.setState({
             client: { 
                 ...this.state.client,

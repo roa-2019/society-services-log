@@ -2,23 +2,30 @@ require('babel-polyfill')
 const request = require('supertest')
 
 const server = require('../../server/server')
-const db = require('../../server/db/db') // the mock
+// const db = require('../../server/db/db') // the mock
 
-jest.mock('../../server/db/db')
+jest.mock('../../server/db/db', () => { 
+  return {
+    getClients: () => Promise.resolve([
+      {},{},{}
+    ])
+  }
+})
 
 beforeEach(() => {
-  db.reset()
+  // db.getClients.mockReset()
 })
 
 test('GET / returns all the clients', () => {
   return request(server)
     .get('/api/v1/clients')
     .then(res => {
-      expect(res.body.clients).toHaveLength(3)
+      
+     expect(res.body.clients).toHaveLength(3)
     })
 })
 
-// test('POST / adds a new fruit', () => {
+// test('POST / adds a new client', () => {
 //   return request(server)
 //     .post('/api/v1/fruits')
 //     .send({ name: 'durian', calories: 26 })
