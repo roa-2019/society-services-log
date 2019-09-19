@@ -23,15 +23,15 @@ class Clients extends React.Component {
         }
     }
     
-    // handleSave = (e) => {
-    //     const newClient = { ...this.state.client }
-    //   addClient(newClient)
-    //         .then(client => {
-    //             this.setState({
-    //                 client
-    //             })
-    //         })
-    // }
+    handleSave = (e) => {
+        const newClient = { ...this.state.client }
+      addClient(newClient)
+            .then(client => {
+                this.setState({
+                    client
+                })
+            })
+    }
 
     handleChange = (e) => {
 
