@@ -1,31 +1,25 @@
+const nock = require('nock')
+import request from 'supertest'
+
 import {
-  getFruits,
-  addFruit,
-  updateFruit,
-  deleteFruit
+  getClients
 } from '../../client/api'
 
+
+
 describe('Client side API client', () => {
-  it.skip('getFruits returns a list of fruits', () => {
-    getFruits()
-      .then(() => {})
-  })
+  test('GET client API', () => {
+    const scope = nock('http://localhost')
+      .get('/api/v1/clients')
+      .reply(200,{clients: [ { data: 'tafadzwa' }]} )
+      
+    return getClients('/api/v1/clients')
+      .then((res) => {
+        expect(200)
+        expect(res[0].data).toBe('tafadzwa')
+        scope.done()
+      })
 
-  it.skip('addFruit adds a fruit', () => {
-    const fruit = {}
-    addFruit(fruit)
-      .then(() => {})
-  })
-
-  it.skip('updateFruit updates a fruit', () => {
-    const fruit = {}
-    updateFruit(fruit)
-      .then(() => {})
-  })
-
-  it.skip('deleteFruit deletes a fruit', () => {
-    const fruit = {}
-    deleteFruit(fruit)
-      .then(() => {})
   })
 })
+
