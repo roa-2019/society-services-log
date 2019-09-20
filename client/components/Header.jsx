@@ -6,7 +6,7 @@ class Header extends Component {
             <React.Fragment>
                 <div id="header">
                     <h1 id="heading">Rose Society</h1>
-                    <p id="header-tag">Fixer of unfortunate events</p>
+                    <p id="header-tag">for unfortunate events</p>
                 </div>
             </React.Fragment>
         )

@@ -3,13 +3,13 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-
+    font-family: Verdana, Geneva, sans-serif;
 }
 #app{
     width: 750px;
     margin: 0 auto;
     padding: 10px;
-
+    font-family: Verdana, Geneva, sans-serif;
 }
 #header{
     display: flex;
@@ -17,20 +17,19 @@ body{
     align-items: center;
     background-image: url('../../flowerbanner.jpg');
     width:730px;
-    height:485px
+    height:485px;
+    font-family: Verdana, Geneva, sans-serif;
 }
 h1{
     font-size: 80px;
     color: #010a43;
     margin-bottom: 10px;
     text-decoration: underline;
-
 }
 h2{
     font-size: 50px;
     color: #010a43;
-    margin-bottom: 10px;
-    
+    margin-bottom: 10px;    
 }
 h5{
     color: #ff3f98;
@@ -42,16 +41,16 @@ h3{
 }
 #heading{
     font-size: 100px;
-    color: #ff3f98;
+    color: #010a43;
     margin-bottom: 10px;
     text-decoration: underline;
+    font-family: Verdana, Geneva, sans-serif;
 }
 #header-tag{
     color: #010a43;
     margin-top: 5px;
     font-size: 25px;
-
-
+    font-style: italic;
 }
 .nav-menu{
     display: flex;
@@ -99,7 +98,6 @@ input[type=text]{
     display: inline-block;
     padding: 10px 10px;
 }
-
 textarea{
     width: 50%;
     border: 1px solid #eda593;
@@ -119,10 +117,8 @@ input[type=date]{
     border: 1px solid #eda593;
     border-radius: 5px;
     display: inline-block;
-    padding: 10px 10px;
-   
+    padding: 10px 10px;   
 }
-
 select{
     width: 25%;
     border: 1px solid #eda593;
@@ -145,8 +141,7 @@ select{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-content: center;
-  
+    align-content: center;  
 }
 ul{
     list-style-type: none;
