@@ -144,14 +144,16 @@ select{
 #list-clients{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-content: center;
+  
 }
 ul{
     list-style-type: none;
 }
 .w3-card-2{
     padding: 10px;
+    margin: 15px
 }
 #signin{
     text-align: center
