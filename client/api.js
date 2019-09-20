@@ -7,7 +7,7 @@ const rootUrl = '/api/v1/clients'
 export function getClients (url = rootUrl){
   return request.get(url)
   .then(res => {
-    return res.body.clients
+      return res.body.clients
   })
   .catch(logError)
 }
