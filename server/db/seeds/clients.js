@@ -58,7 +58,7 @@ exports.seed = function (knex, Promise) {
           firstName: 'Josephine',
           lastName: 'Anwhistle',
           address: ' Lake Lachrymose',
-          situation: 'Suffers form irrational fears including her home falling into the lake.',
+          situation: 'Suffers from irrational fears including her home falling into the lake.',
           service_date: '2003-01-01',
           service_type: 'Student Grant',
           cost: 200.00,
