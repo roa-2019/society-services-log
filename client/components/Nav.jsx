@@ -9,7 +9,7 @@ import { IfAuthenticated, IfNotAuthenticated } from './Authenticated'
 export default function Nav () {
   return (
     <React.Fragment>
-      <div>
+      <div className='nav-menu'>
         <Link to='/'>Home</Link><br/>
         <IfAuthenticated>
           <Link to='#' data-testid='logoff' onClick={logOff}>Log off</Link> <br/>

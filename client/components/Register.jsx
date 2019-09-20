@@ -35,7 +35,8 @@ export default function Register (props) {
 
   return (
     <React.Fragment>
-      <h2>Register</h2>
+      <div id="reg-sign-box">
+      <h2 id="signin">Register</h2>
       <GridForm>
         <ColOne>Username:</ColOne>
         <ColTwo name='username'
@@ -49,6 +50,7 @@ export default function Register (props) {
 
         <Button type='button' onClick={handleClick}>Register</Button>
       </GridForm>
+      </div>
     </React.Fragment>
   )
 }

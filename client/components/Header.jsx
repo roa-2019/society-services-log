@@ -4,9 +4,10 @@ class Header extends Component {
     render() {
         return (
             <React.Fragment>
-                <h1>Rose Society</h1>
-                <p>Charitable Organisation</p>
-                <img src='flowerbanner.jpg' />
+                <div id="header">
+                    <h1 id="heading">Rose Society</h1>
+                    <p id="header-tag">Fixer of unfortunate events</p>
+                </div>
             </React.Fragment>
         )
     }

@@ -1,0 +1,163 @@
+body{
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#app{
+    width: 750px;
+    margin: 0 auto;
+    padding: 10px;
+
+}
+#header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('../../flowerbanner.jpg');
+    width:730px;
+    height:485px
+}
+h1{
+    font-size: 80px;
+    color: #010a43;
+    margin-bottom: 10px;
+    text-decoration: underline;
+
+}
+h2{
+    font-size: 50px;
+    color: #010a43;
+    margin-bottom: 10px;
+    
+}
+h5{
+    color: #ff3f98;
+    font-size: 15px
+}
+h3{
+    color: #ff3f98;
+    font-size: 25px
+}
+#heading{
+    font-size: 100px;
+    color: #ff3f98;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+#header-tag{
+    color: #010a43;
+    margin-top: 5px;
+    font-size: 25px;
+
+
+}
+.nav-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: #ff3f98;
+    width: 725px;
+    position: relative;
+    top: -250px;
+    font-size: 20px;
+    font-weight: 900;
+}
+a{
+    color:#ff3f98;
+    text-decoration: none;
+}
+a:hover{
+    color: #010a43;
+    font-weight: bold;
+}
+
+.client-form{
+    margin: auto;
+    border: 3px solid #f3d3d3;
+    text-align: center;
+    width: 730px;
+}
+input[type=submit]{
+    width: 10%;
+    background-color: #ff3f98;
+    border-radius: 5px;
+    color: #ffeecc;
+    font-weight: 900;
+    border: none;
+    padding: 14px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px
+
+}
+input[type=text]{
+    width: 50%;
+    border: 1px solid #eda593;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 10px 10px;
+}
+
+textarea{
+    width: 50%;
+    border: 1px solid #eda593;
+    border-radius: 5px;
+    display: inline-block
+}
+input[type=number]{
+    width: 90px;
+    height: 30px;
+    padding: 5px 5px;
+    border: 1px solid #eda593;
+    border-radius: 5px;
+    display: inline-block;
+}
+input[type=date]{
+    width: 25%;
+    border: 1px solid #eda593;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 10px 10px;
+   
+}
+
+select{
+    width: 25%;
+    border: 1px solid #eda593;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 10px 10px;
+    background-color: white
+}
+#form-note{
+    font-size: 15px;
+    color: #f3d3d3
+
+}
+.clientList{
+    width: 700px;
+    margin: 0 auto;
+    padding: 10px;
+}
+#list-clients{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+}
+ul{
+    list-style-type: none;
+}
+.w3-card-2{
+    padding: 10px;
+}
+#signin{
+    text-align: center
+}
+#reg-sign-box{
+    margin: auto;
+    border: 3px solid #f3d3d3;
+    
+}

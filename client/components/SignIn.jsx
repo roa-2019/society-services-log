@@ -32,7 +32,7 @@ export default function SignIn (props) {
 
   return (
     <React.Fragment>
-      <h2>Sign in</h2>
+      <h2 id="signin">Sign in</h2>
       <GridForm>
         <ColOne>Username:</ColOne>
         <ColTwo name='username'
